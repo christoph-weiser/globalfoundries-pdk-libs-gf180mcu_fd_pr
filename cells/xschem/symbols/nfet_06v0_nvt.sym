@@ -22,8 +22,8 @@ format="@spiceprefix@name @pinlist @model L=@L W=@W
 + nrd=@nrd nrs=@nrs sa=@sa sb=@sb sd=@sd
 + m=@m"
 template="name=M1
-L=0.28u
-W=0.22u
+L=1.80u
+W=0.80u
 nf=1
 m=1
 ad=\\"'int((nf+1)/2) * W/nf * 0.18u'\\"
@@ -32,7 +32,7 @@ as=\\"'int((nf+2)/2) * W/nf * 0.18u'\\"
 ps=\\"'2*int((nf+2)/2) * (W/nf + 0.18u)'\\"
 nrd=\\"'0.18u / W'\\" nrs=\\"'0.18u / W'\\"
 sa=0 sb=0 sd=0
-model=nmos_3p3_sab
+model=nfet_06v0
 spiceprefix=X
 "
 }
@@ -40,10 +40,10 @@ V {}
 S {}
 E {}
 L 4 7.5 -22.5 7.5 22.5 {}
-L 4 -20 0 2.5 0 {}
+L 4 -20 0 -2.5 0 {}
 L 4 20 -30 20 -17.5 {}
 L 4 20 17.5 20 30 {}
-L 4 2.5 -15 2.5 15 {}
+L 4 -2.5 -15 -2.5 15 {}
 L 4 7.5 -17.5 20 -17.5 {}
 L 4 7.5 17.5 15 17.5 {}
 B 5 17.5 -32.5 22.5 -27.5 {name=D dir=inout}

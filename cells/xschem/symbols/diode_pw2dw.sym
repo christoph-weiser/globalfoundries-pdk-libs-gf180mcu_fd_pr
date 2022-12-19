@@ -19,9 +19,9 @@ G {}
 K {type=diode
 format="@name @pinlist @model area='@r_w * @r_l ' pj='2*@r_w + 2*@r_l ' m=@m"
 template="name=D1
-model=np_3p3
-r_w=1u
-r_l=1u
+model=diode_pw2dw
+r_w=3u
+r_l=3u
 m=1"
 }
 V {}
