@@ -550,44 +550,44 @@
 .endl moscap_ss
 
 .lib statistical
-.param mc_sig_vth2=agauss(0,1,3)
-.param mc_toxe2=agauss(0,1,3)
-.param mc_xl2=agauss(0,1,3)
-.param mc_xw2=agauss(0,1,3)
-.param mc_xj2=agauss(0,1,3)
-.param mc_sig_vthn2=agauss(0,1,3)
-.param mc_toxen2=agauss(0,1,3)
-.param mc_xln2=agauss(0,1,3)
-.param mc_xwn2=agauss(0,1,3)
-.param mc_xjn2=agauss(0,1,3)
-.param mc_rdswn2=agauss(0,1,3)
-.param mc_sig_vthp2=agauss(0,1,3)
-.param mc_toxep2=agauss(0,1,3)
-.param mc_xlp2=agauss(0,1,3)
-.param mc_xwp2=agauss(0,1,3)
-.param mc_xjp2=agauss(0,1,3)
-.param mc_rdswp2=agauss(0,1,3)
-.param mc_rsh_nplus_u_temp=agauss(0,3.85,3)
-.param mc_rsh_pplus_u_temp=agauss(0,10,3)
-.param mc_sig_vth=mc_sig_vth2
-.param mc_toxe=mc_toxe2
-.param mc_xl=mc_xl2
-.param mc_xw=mc_xw2
-.param mc_xj=mc_xj2
-.param mc_sig_vthn=mc_sig_vthn2
-.param mc_toxen=mc_toxen2
-.param mc_xln=mc_xln2
-.param mc_xwn=mc_xwn2
-.param mc_xjn=mc_xjn2
-.param mc_rdswn=mc_rdswn2
-.param mc_sig_vthp=mc_sig_vthp2
-.param mc_toxep=mc_toxep2
-.param mc_xlp=mc_xlp2
-.param mc_xwp=mc_xwp2
-.param mc_xjp=mc_xjp2
-.param mc_rdswp=mc_rdswp2
-.param mc_rsh_nplus_u=mc_rsh_nplus_u_temp
-.param mc_rsh_pplus_u=mc_rsh_pplus_u_temp
+.param mc_sig_vth2='agauss(0,1,3)'
+.param mc_toxe2='agauss(0,1,3)'
+.param mc_xl2='agauss(0,1,3)'
+.param mc_xw2='agauss(0,1,3)'
+.param mc_xj2='agauss(0,1,3)'
+.param mc_sig_vthn2='agauss(0,1,3)'
+.param mc_toxen2='agauss(0,1,3)'
+.param mc_xln2='agauss(0,1,3)'
+.param mc_xwn2='agauss(0,1,3)'
+.param mc_xjn2='agauss(0,1,3)'
+.param mc_rdswn2='agauss(0,1,3)'
+.param mc_sig_vthp2='agauss(0,1,3)'
+.param mc_toxep2='agauss(0,1,3)'
+.param mc_xlp2='agauss(0,1,3)'
+.param mc_xwp2='agauss(0,1,3)'
+.param mc_xjp2='agauss(0,1,3)'
+.param mc_rdswp2='agauss(0,1,3)'
+.param mc_rsh_nplus_u_temp='agauss(0,3.85,3)'
+.param mc_rsh_pplus_u_temp='agauss(0,10,3)'
+.param mc_sig_vth='mc_sig_vth2'
+.param mc_toxe='mc_toxe2'
+.param mc_xl='mc_xl2'
+.param mc_xw='mc_xw2'
+.param mc_xj='mc_xj2'
+.param mc_sig_vthn='mc_sig_vthn2'
+.param mc_toxen='mc_toxen2'
+.param mc_xln='mc_xln2'
+.param mc_xwn='mc_xwn2'
+.param mc_xjn='mc_xjn2'
+.param mc_rdswn='mc_rdswn2'
+.param mc_sig_vthp='mc_sig_vthp2'
+.param mc_toxep='mc_toxep2'
+.param mc_xlp='mc_xlp2'
+.param mc_xwp='mc_xwp2'
+.param mc_xjp='mc_xjp2'
+.param mc_rdswp='mc_rdswp2'
+.param mc_rsh_nplus_u='mc_rsh_nplus_u_temp'
+.param mc_rsh_pplus_u='mc_rsh_pplus_u_temp'
 .param nmos_3p3_sig_vth1='(5e-3*mc_sig_vth+30e-3*mc_sig_vthn)*sw_stat_global*mc_skew'
 .param nmos_3p3_sig_vth2='(5e-3*mc_sig_vth+25e-3*mc_sig_vthn)*sw_stat_global*mc_skew'
 .param nmos_3p3_sig_vth3='(5e-3*mc_sig_vth+15e-3*mc_sig_vthn)*sw_stat_global*mc_skew'
@@ -696,9 +696,9 @@
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b nplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b nplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b nmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -736,9 +736,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b nplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b nplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b nmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -776,9 +776,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b nplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b nplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b nmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -816,9 +816,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b nplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b nplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b nmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -856,9 +856,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b nplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b nplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b nmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -896,9 +896,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b pplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b pplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b pmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -936,9 +936,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b pplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b pplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b pmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -976,9 +976,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b pplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b pplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b pmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -1016,9 +1016,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b pplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b pplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b pmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -1056,9 +1056,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b pplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b pplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b pmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -1096,9 +1096,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b nplus_u_m2 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b nplus_u_m2 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b nmos_6p0 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=0 sb=0 sd=0 delvto='mis_vth*sw_stat_mismatch'
@@ -1129,9 +1129,9 @@ m0 d g s b nmos_6p0_nat w=w l=l as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sa=sa sb
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b pplus_u_m2 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b pplus_u_m2 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b pmos_6p0 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=0 sb=0 sd=0 delvto='mis_vth*sw_stat_mismatch'
@@ -1488,9 +1488,9 @@ c_moscap 1 2 c='pmoscap_6p0_b_corner*c_length*c_width*(cvar1+cvar2*tanh(cvar3*v(
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b nplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b nplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b nmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -1528,9 +1528,9 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b pplus_u_m1 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b pplus_u_m1 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b pmos_3p3 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=sa sb=sb sd=sd delvto='mis_vth*sw_stat_mismatch'
@@ -1575,9 +1575,9 @@ m0 d g s b nmos_6p0_nat w=w l=l as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sa=sa sb
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 xr1 d d1 b pplus_u_m2 wr='w' lr='(d_sab==0)?1e-15:d_sab'
 xr2 s s1 b pplus_u_m2 wr='w' lr='(s_sab==0)?1e-15:s_sab'
 m0 d1 g s1 b pmos_6p0 w='w' l='l' as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs nf=nf sa=0 sb=0 sd=0 delvto='mis_vth*sw_stat_mismatch'
@@ -1606,9 +1606,9 @@ rfuse in out r='200*(1-pblow)+900*pblow'
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 m0 d g s b nmos_3p3 w=w l=l as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs delvto='mis_vth*sw_stat_mismatch' sa=sa sb=sb nf=nf sd=sd
 .ends nmos_3p3
 .subckt pmos_3p3 d g s b w=1e-5 l=2.8e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
@@ -1620,9 +1620,9 @@ m0 d g s b nmos_3p3 w=w l=l as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs delvto='mis_
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 m0 d g s b pmos_3p3 w=w l=l as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs delvto='mis_vth*sw_stat_mismatch' sa=sa sb=sb nf=nf sd=sd
 .ends pmos_3p3
 .subckt nmos_6p0 d g s b w=1e-5 l=7e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
@@ -1634,9 +1634,9 @@ m0 d g s b pmos_3p3 w=w l=l as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs delvto='mis_
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 m0 d g s b nmos_6p0 w=w l=l as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs delvto='mis_vth*sw_stat_mismatch' sa=sa sb=sb nf=nf sd=sd
 .ends nmos_6p0
 .subckt pmos_6p0 d g s b w=1e-5 l=5e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
@@ -1648,9 +1648,9 @@ m0 d g s b nmos_6p0 w=w l=l as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs delvto='mis_
 .param par_weff='par*(w-par_w)'
 .param p_sqrtarea='sqrt((par_leff)*(par_weff))'
 .param var_k='0.7071*par_k*1e-06/p_sqrtarea'
-.param mis_k=agauss(0,var_k,1)
+.param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
-.param mis_vth=agauss(0,var_vth,1)
+.param mis_vth='agauss(0,var_vth,1)'
 m0 d g s b pmos_6p0 w=w l=l as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs delvto='mis_vth*sw_stat_mismatch' sa=sa sb=sb nf=nf sd=sd
 .ends pmos_6p0
 .endl fets_mm
@@ -1839,28 +1839,28 @@ m0 d g s b pmos_6p0 w=w l=l as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs delvto='mis_
 
 .lib bjt_mc
 .subckt vpnp_0p42x10 c b e par=1 dtemp=0
-.param mis_is_vpnp_0p42x10=agauss(0,0.0015,1)
-.param mis_bf_vpnp_0p42x10=agauss(0,0.01088,1)
+.param mis_is_vpnp_0p42x10='agauss(0,0.0015,1)'
+.param mis_bf_vpnp_0p42x10='agauss(0,0.01088,1)'
 .param isa_mis_vpnp_0p42x10='mis_is_vpnp_0p42x10*sw_stat_mismatch/sqrt(par)'
 .param bf_mis_vpnp_0p42x10='mis_bf_vpnp_0p42x10*sw_stat_mismatch/sqrt(par)'
 q0 c b e vpnp_0p42x10 ['dtemp=dtemp']
 .model vpnp_0p42x10 pnp tref=25  level=1 cjc='2.04e-014*cjca*(1+mc_xcjc_vpnp*sw_stat_global)'  cje='6.88e-015*cjea*(1+mc_xcje_vpnp*sw_stat_global)'  cjs=0 fc=0.5 mjc=0.22711  mje=0.14469  mjs=0.5 vjc=0.43905 vje=0.43905  vjs=0.75  xcjc=1 cbcp=0 cbep=0  ccsp=0  itf=0.1 ptf=0 tf=1e-010  tr=0  vtf=10 xtf=1 af=1  kf=0 is='9e-019*isa*(1+mc_xis_vpnp*sw_stat_global)*(1+isa_mis_vpnp_0p42x10)'  rb='41*rba*(1+mc_xrb_vpnp*sw_stat_global)'  re='1*rea*(1+mc_xre_vpnp*sw_stat_global)' irb=0.1 rc='10*rca*(1+mc_xrc_vpnp*sw_stat_global)'  rbm='10*rbma'  bf='1.69*bfa*(1+mc_xbf_vpnp*sw_stat_global)*(1+bf_mis_vpnp_0p42x10)' nf=1 vaf=80  ikf=0.00063375  ise=2.7e-016 ne=1.64 br=0.0036  nr=1  var=23 ikr=0.1 nkf=0.4  isc=1e-018  nc=2 xtb=0.0001  xti=3  eg=1.17 ctc=0.0028626 cte=0.001  tlevc=1  tvjc=0.0024779 tvje=0.0019314 tbf1=0.0061  tikf1=-0.0043  tbf2=-4.235165e-022
 .ends vpnp_0p42x10
 .subckt vpnp_0p42x5 c b e par=1 dtemp=0
-.param mis_is_vpnp_0p42x5=agauss(0,0.0017,1)
-.param mis_bf_vpnp_0p42x5=agauss(0,0.0119,1)
+.param mis_is_vpnp_0p42x5='agauss(0,0.0017,1)'
+.param mis_bf_vpnp_0p42x5='agauss(0,0.0119,1)'
 q0 c b e vpnp_0p42x5 ['dtemp=dtemp']
 .model vpnp_0p42x5 pnp level=1 tlevc=1  tref=25 is='4.388e-19*isa*(1+mc_xis_vpnp*sw_stat_global)*(1+mis_is_vpnp_0p42x5*sw_stat_mismatch/sqrt(par))' bf='1.681*bfa*(1+mc_xbf_vpnp*sw_stat_global)*(1+mis_bf_vpnp_0p42x5*sw_stat_mismatch/sqrt(par))' nf=1 vaf=180 ikf=2.4777e-4  nkf=0.4 ise=1.2124e-16 ne=1.64  br=1.9872e-3 nr=1 var=23  ikr=0.1 isc=1e-16 nc=2 rb='41*rba*(1+mc_xrb_vpnp*sw_stat_global)' irb=0.1  rbm='10*rbma' re='1*rea*(1+mc_xre_vpnp*sw_stat_global)' rc='10*rca*(1+mc_xrc_vpnp*sw_stat_global)' cje='3.5e-15*cjea*(1+mc_xcje_vpnp*sw_stat_global)' vje=0.43905  mje=0.15395 cjc='1.17e-14*cjca*(1+mc_xcjc_vpnp*sw_stat_global)' vjc=0.43905  mjc=0.22711 cjs=0 vjs=0.75  mjs=0.5 tf=1e-10 xtf=1  vtf=10 itf=0.1 xcjc=1  fc=0.5 tr=0 ptf=0  cbcp=0 cbep=0 ccsp=0 xtb=1e-4 xti=3  eg=1.17 tbf1=6.1e-3 tbf2=-4.235165e-22  tikf1=-4.3e-3 cte=1e-3 ctc=2.8626e-3  tvje=1.9314e-3 tvjc=2.4779e-3 kf=0 af=1
 .ends vpnp_0p42x5
 .subckt vpnp_10x10 c b e par=1 dtemp=0
-.param mis_is_vpnp_10x10=agauss(0,0.00077,1)
-.param mis_bf_vpnp_10x10=agauss(0,0.0013,1)
+.param mis_is_vpnp_10x10='agauss(0,0.00077,1)'
+.param mis_bf_vpnp_10x10='agauss(0,0.0013,1)'
 q0 c b e vpnp_10x10 ['dtemp=dtemp']
 .model vpnp_10x10 pnp level=1 tlevc=1  tref=25 is='1.249175e-17*isa*(1+mc_xis_vpnp*sw_stat_global)*(1+mis_is_vpnp_10x10*sw_stat_mismatch/sqrt(par))' bf='1.7*bfa*(1+mc_xbf_vpnp*sw_stat_global)*(1+mis_bf_vpnp_10x10*sw_stat_mismatch/sqrt(par))'  nf=1 vaf=206.4 ikf=2.610625e-3  nkf=0.4 ise=2.7e-16 ne=1.64  br=0.017038 nr=1 var=23  ikr=0.1 isc=1e-18 nc=2 rb='27.88*rba*(1+mc_xrb_vpnp*sw_stat_global)' irb=0.1  rbm='10*rbma' re='1*rea*(1+mc_xre_vpnp*sw_stat_global)' rc='10*rca*(1+mc_xrc_vpnp*sw_stat_global)' cje='9.71e-14*cjea*(1+mc_xcje_vpnp*sw_stat_global)' vje=0.43905  mje=0.24192 cjc='4.69e-14*cjca*(1+mc_xcjc_vpnp*sw_stat_global)' vjc=0.43905  mjc=0.24528 cjs=0 vjs=0.75  mjs=0.5 tf=1e-10 xtf=1  vtf=10 itf=0.1 xcjc=1  fc=0.5 tr=0 ptf=0  cbcp=0 cbep=0 ccsp=0 xtb=1e-4 xti=3  eg=1.17 tbf1=4.26e-3 tbf2=-1.4e-6  tikf1=-4.3e-3 cte=1e-3 ctc=2.8626e-3  tvje=1.9314e-3 tvjc=2.4779e-3 kf=0 af=1
 .ends vpnp_10x10
 .subckt vpnp_5x5 c b e par=1 dtemp=0
-.param mis_is_vpnp_5x5=agauss(0,0.00052,1)
-.param mis_bf_vpnp_5x5=agauss(0,0.0031,1)
+.param mis_is_vpnp_5x5='agauss(0,0.00052,1)'
+.param mis_bf_vpnp_5x5='agauss(0,0.0031,1)'
 q0 c b e vpnp_5x5 ['dtemp=dtemp']
 .model vpnp_5x5 pnp level=1 tlevc=1  tref=25 is='3.403e-18*isa*(1+mc_xis_vpnp*sw_stat_global)*(1+mis_is_vpnp_5x5*sw_stat_mismatch/sqrt(par))' bf='1.65*bfa*(1+mc_xbf_vpnp*sw_stat_global)*(1+mis_bf_vpnp_5x5*sw_stat_mismatch/sqrt(par))'  nf=1 vaf=208.8 ikf=1.025275e-3  nkf=0.4 ise=2.7e-16 ne=1.64  br=8.372e-3 nr=1 var=27.37  ikr=0.1 isc=1e-18 nc=2 rb='41*rba*(1+mc_xrb_vpnp*sw_stat_global)' irb=0.1  rbm='10*rbma' re='1*rea*(1+mc_xre_vpnp*sw_stat_global)' rc='10*rca*(1+mc_xrc_vpnp*sw_stat_global)' cje='2.57e-14*cjea*(1+mc_xcje_vpnp*sw_stat_global)' vje=0.43905  mje=0.23266 cjc='2.15e-14*cjca*(1+mc_xcjc_vpnp*sw_stat_global)' vjc=0.43905  mjc=0.22711 cjs=0 vjs=0.75  mjs=0.5 tf=1e-10 xtf=1  vtf=10 itf=0.1 xcjc=1  fc=0.5 tr=0 ptf=0  cbcp=0 cbep=0 ccsp=0 xtb=1e-4 xti=3  eg=1.17 tbf1=4.54e-3 tbf2=-9e-7  tikf1=-4.3e-3 cte=1e-3 ctc=2.8626e-3  tvje=1.9314e-3 tvjc=2.4779e-3 kf=0 af=1
 .ends vpnp_5x5
@@ -1894,9 +1894,9 @@ q0 c b e s vnpn_0p54x2 ['dtemp=dtemp']
 .param mim_corner_1p5ff=1
 .param mim_corner_1p0ff=1
 .param mim_corner_2p0ff=1
-.param mc_c_cox_1p0ff2=agauss(0,0.025,3)
-.param mc_c_cox_1p5ff2=agauss(0,0.03875,3)
-.param mc_c_cox_2p0ff2=agauss(0,0.025,3)
+.param mc_c_cox_1p0ff2='agauss(0,0.025,3)'
+.param mc_c_cox_1p5ff2='agauss(0,0.03875,3)'
+.param mc_c_cox_2p0ff2='agauss(0,0.025,3)'
 .param mc_c_cox_1p0ff='mc_c_cox_1p0ff2*sw_stat_global*cap_mc_skew'
 .param mc_c_cox_1p5ff='mc_c_cox_1p5ff2*sw_stat_global*cap_mc_skew'
 .param mc_c_cox_2p0ff='mc_c_cox_2p0ff2*sw_stat_global*cap_mc_skew'
