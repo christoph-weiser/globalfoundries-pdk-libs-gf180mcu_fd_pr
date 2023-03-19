@@ -13,7 +13,7 @@
 * limitations under the License.
 
 *************************************************************************
-*** Global Parameter Settings
+** Global Parameter Settings
 *************************************************************************
 ** XYCE include file for global switches, corner parameters
 ** and other user-defined settings
@@ -59,13 +59,13 @@
 ** Switches
 **
 *********** Default mc switches **********
-.param sw_stat_global=0 
-.param sw_stat_mismatch=0 
+.param sw_stat_global=0
+.param sw_stat_mismatch=0
 
 ********* Default mc skew value *********
-.param mc_skew=3 
+.param mc_skew=3
 .param res_mc_skew=3
-.param cap_mc_skew=3 
+.param cap_mc_skew=3
 
 ****** Default flicker noise corner switch *****
 .param fnoicor=0
