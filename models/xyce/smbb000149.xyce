@@ -181,30 +181,30 @@
 .endl fs
 
 .lib statistical
-.param mc_vsat2_10v={agauss(0,1,3)}
-.param mc_rd_10v_2={agauss(0,1,3)}
-.param mc_u0_10v_2={agauss(0,1,3)}
-.param mc_cgol_10v_2={agauss(0,1,3)}
-.param mc_vsatn2_10v={agauss(0,1,3)}
-.param mc_rdn_10v_2={agauss(0,1,3)}
-.param mc_u0n_10v_2={agauss(0,1,3)}
-.param mc_cgoln_10v_2={agauss(0,1,3)}
-.param mc_vsatp2_10v={agauss(0,1,3)}
-.param mc_u0p2_10v={agauss(0,1,3)}
-.param mc_rdp_10v_2={agauss(0,1,3)}
-.param mc_cgolp_10v_2={agauss(0,1,3)}
-.param mc_vsat_10v={mc_vsat2_10v}
-.param mc_rd_10v={mc_rd_10v_2}
-.param mc_u0_10v={mc_u0_10v_2}
-.param mc_cgol_10v={mc_cgol_10v_2}
-.param mc_vsatn_10v={mc_vsatn2_10v}
-.param mc_rdn_10v={mc_rdn_10v_2}
-.param mc_u0n_10v={mc_u0n_10v_2}
-.param mc_cgoln_10v={mc_cgoln_10v_2}
-.param mc_vsatp_10v={mc_vsatp2_10v}
-.param mc_u0p_10v={mc_u0p2_10v}
-.param mc_rdp_10v={mc_rdp_10v_2}
-.param mc_cgolp_10v={mc_cgolp_10v_2}
+.param mc_vsat2_10v='agauss(0,1,3)'
+.param mc_rd_10v_2='agauss(0,1,3)'
+.param mc_u0_10v_2='agauss(0,1,3)'
+.param mc_cgol_10v_2='agauss(0,1,3)'
+.param mc_vsatn2_10v='agauss(0,1,3)'
+.param mc_rdn_10v_2='agauss(0,1,3)'
+.param mc_u0n_10v_2='agauss(0,1,3)'
+.param mc_cgoln_10v_2='agauss(0,1,3)'
+.param mc_vsatp2_10v='agauss(0,1,3)'
+.param mc_u0p2_10v='agauss(0,1,3)'
+.param mc_rdp_10v_2='agauss(0,1,3)'
+.param mc_cgolp_10v_2='agauss(0,1,3)'
+.param mc_vsat_10v='mc_vsat2_10v'
+.param mc_rd_10v='mc_rd_10v_2'
+.param mc_u0_10v='mc_u0_10v_2'
+.param mc_cgol_10v='mc_cgol_10v_2'
+.param mc_vsatn_10v='mc_vsatn2_10v'
+.param mc_rdn_10v='mc_rdn_10v_2'
+.param mc_u0n_10v='mc_u0n_10v_2'
+.param mc_cgoln_10v='mc_cgoln_10v_2'
+.param mc_vsatp_10v='mc_vsatp2_10v'
+.param mc_u0p_10v='mc_u0p2_10v'
+.param mc_rdp_10v='mc_rdp_10v_2'
+.param mc_cgolp_10v='mc_cgolp_10v_2'
 .param nmos_10p0_asym_sig_vth='0.01675*(0.7*mc_sig_vth+0.7*mc_sig_vthn)*sw_stat_global*mc_skew'
 .param nmos_10p0_asym_dtox='7.2e-11*(0.77*mc_toxe+0.63*mc_toxen)*sw_stat_global*mc_skew'
 .param nmos_10p0_asym_dxl='5.3e-9*(0.71*mc_xl+0.69*mc_xln)*sw_stat_global*mc_skew'
@@ -285,9 +285,9 @@
 .param cgdl_d=1.3222e-11
 .param cgs_vth1=0.20635
 .param cgds_fixed='3.9*8.854e-12/toxep'
-rdrift d d2 tc1={trx1} tc2={trx2} m={nf} r='(rdrift1*nmos_10p0_asym_drdrift)*1.2e-6/(w/nf-wa)'
-rd2 d2 d1 m={nf} r='max(1e-2,(rd*nmos_10p0_asym_drdsw*(1+trth1*(temp+dtemp-25)+trth2*(temp+dtemp-25)*(temp+dtemp-25)))/(w/nf-wb)*(tanh(ra*(v(d,s)-rb*(l-lb)/(0.6e-6-lb)))))'
-m0 d1 g s b nmos_10p0_asym_core ad={ad} as={as} l={l} nf={nf} nrd={nrd} nrs={nrs} pd={pd} ps={ps} sa={sa} sb={sb} sd={sd} w={w}
+rdrift d d2 tc1='trx1' tc2='trx2' m='nf' r='(rdrift1*nmos_10p0_asym_drdrift)*1.2e-6/(w/nf-wa)'
+rd2 d2 d1 m='nf' r='max(1e-2,(rd*nmos_10p0_asym_drdsw*(1+trth1*(temp+dtemp-25)+trth2*(temp+dtemp-25)*(temp+dtemp-25)))/(w/nf-wb)*(tanh(ra*(v(d,s)-rb*(l-lb)/(0.6e-6-lb)))))'
+m0 d1 g s b nmos_10p0_asym_core ad='ad' as='as' l='l' nf='nf' nrd='nrd' nrs='nrs' pd='pd' ps='ps' sa='sa' sb='sb' sd='sd' w='w'
 c1_gd g d c='nmos_10p0_asym_dcgd*(cgds_fixed*w*lcgd_d+exp(polar_d*min(max(v(d,s)-vthd,0),polard_min))*cgdl_d*w*(1+tanh(cgdv_d/(1+cgd_val*max(v(d,g),0))*(v(g,d1)+cgd_vthd*(1+cgdv_d2*v(d,d1))-nmos_10p0_asym_dvth0))))'
 c1_gd2 g d1 c='nmos_10p0_asym_dcgd*(cgds_fixed*w*lcgd_d2+cgdl_d2*w*(1+tanh(cgdv_d/(1+cgd_val*max(v(d,g),0))*(v(g,d1)+cgd_vthd*(1+cgdv_d2*v(d,d1))-nmos_10p0_asym_dvth0))))'
 c2_gs g s c='nmos_10p0_asym_dcgs*(cgds_fixed*w*lcgs+cgsl_s*w*(1-tanh(cgs_slope*(v(s,g)+cgs_vth)))*(1+cgs_factor/(1+cgs_factor2*exp(-v(g,d1)-cgs_vth1))*(1-exp(polar_s*min(max(v(d1,s)-vthd,0),polars_min)))))'
@@ -335,9 +335,9 @@ c3_gb g b c='(cgb_min+cgb_amp/(1+(1/pow(max(1e-3,cgb_slope*(v(b,g)-cgb_vth+nmos_
 .param cgdl_d=1.6046e-11
 .param cgs_vth1=0.13041
 .param cgds_fixed='3.9*8.854e-12/toxep'
-rd1 d d2 tc1={trx1} tc2={trx2} m={nf} r='(rdrift*pmos_10p0_asym_drdrift)/(w/nf-wa)'
-rd2 d2 d1 m={nf} r='max(0.1,(rd*pmos_10p0_asym_drdsw*(1+trd1*(temp+dtemp-25))/(w/nf-wb)*(tanh(ra*(v(s,d)-rb*(l-lb)/(0.6e-6-lb))))))'
-m0 d1 g s b pmos_10p0_asym_core ad={ad} as={as} l={l} nf={nf} nrd={nrd} nrs={nrs} pd={pd} ps={ps} sa={sa} sb={sb} sd={sd} w={w}
+rd1 d d2 tc1='trx1' tc2='trx2' m='nf' r='(rdrift*pmos_10p0_asym_drdrift)/(w/nf-wa)'
+rd2 d2 d1 m='nf' r='max(0.1,(rd*pmos_10p0_asym_drdsw*(1+trd1*(temp+dtemp-25))/(w/nf-wb)*(tanh(ra*(v(s,d)-rb*(l-lb)/(0.6e-6-lb))))))'
+m0 d1 g s b pmos_10p0_asym_core ad='ad' as='as' l='l' nf='nf' nrd='nrd' nrs='nrs' pd='pd' ps='ps' sa='sa' sb='sb' sd='sd' w='w'
 c1_gd g d c='pmos_10p0_asym_dcgd*(cgds_fixed*w*lcgd_d+exp(polar_d*min(max(-v(d,s)-vthd,0),polard_min))*cgdl_d*w*(1+tanh(cgdv_d/(1+cgd_val*max(-v(d,g),0))*(-v(g,d1)+cgd_vthd*(1+cgdv_d2*-v(d,d1))-pmos_10p0_asym_dvth0))))'
 c1_gd2 g d1 c='pmos_10p0_asym_dcgd*(cgds_fixed*w*lcgd_d2+cgdl_d2*w*(1+tanh(cgdv_d/(1+cgd_val*max(-v(d,g),0))*(-v(g,d1)+cgd_vthd*(1+cgdv_d2*-v(d,d1))-pmos_10p0_asym_dvth0))))'
 c2_gs g s c='pmos_10p0_asym_dcgs*(cgds_fixed*w*lcgs+cgsl_s*w*(1-tanh(cgs_slope*(-v(s,g)+cgs_vth)))*(1+cgs_factor/(1+cgs_factor2*exp(v(g,d1)-cgs_vth1))*(1-exp(polar_s*min(max(-v(d1,s)-vthd,0),polars_min)))))'
