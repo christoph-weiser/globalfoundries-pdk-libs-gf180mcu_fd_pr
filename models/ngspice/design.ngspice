@@ -59,18 +59,15 @@
 ** Switches
 **
 *********** Default mc switches **********
-**
-.param
-+  sw_stat_global = 1
-+  sw_stat_mismatch = 1
-**
+.param sw_stat_global=0
+.param sw_stat_mismatch=0
+
 ********* Default mc skew value *********
-**
-+ mc_skew = 3
-+ res_mc_skew = 3
-+ cap_mc_skew = 3
-**
+.param mc_skew=3
+.param res_mc_skew=3
+.param cap_mc_skew=3
+
 ****** Default flicker noise corner switch *****
-**
-+  fnoicor = 0
+.param fnoicor=0
+
 ********************************************************************************
