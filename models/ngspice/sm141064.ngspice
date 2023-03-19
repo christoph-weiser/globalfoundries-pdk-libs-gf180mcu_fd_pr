@@ -15,17 +15,17 @@
 *******************************************************************************
 * Document No.      : YI-141-SM064
 * Revision          : 9
-* Process Name      : 0.18um 3.3V/6V high voltage MCU process 
+* Process Name      : 0.18um 3.3V/6V high voltage MCU process
 * Process ID        : TH18300G0A-PID007347
 *					  TH18300G1A-PID007352
 *					  TH183G0G6A-PID009507
 *					  TH18300G7A-PID009628
 *					  TH18300G4A-PID009792
 *					  TH18300G9A-PID010186
-* Wafer ID          : GT3512K wf#02 (3.3V NMOS, 6.0V NMOS, 6.0V native NMOS and NMOSCAP) 
+* Wafer ID          : GT3512K wf#02 (3.3V NMOS, 6.0V NMOS, 6.0V native NMOS and NMOSCAP)
 *                     GT3512K wf#06 (3.3V PMOS, 6.0V PMOS, PMOSCAP and BJT)
 *                     GT9755L wf#18 (PWELL/DNWELL and DNWELL/Psub diode, Vertical NPN)
-*                     JT1042L01 (6V NMOS L=0.6um) 
+*                     JT1042L01 (6V NMOS L=0.6um)
 *                     TCXN39W20 W#4 schottky diode
 ************************************************************************************************
 * Models included in this release :
@@ -86,17 +86,17 @@
 *      tm30k              Subcircuit Model for 2-terminal top metal 30k resistor
 *
 *      mim_1p5fF          Subcircuit Model for 1.5fF/um2 MIM (*)-usable for Volt <=6V across capacitor
-*      mim_1p0fF          Subcircuit Model for 1.0fF/um2 MIM (*)-usable for Volt <=20V across capacitor 
+*      mim_1p0fF          Subcircuit Model for 1.0fF/um2 MIM (*)-usable for Volt <=20V across capacitor
 *      mim_2p0fF          Subcircuit Model for 2fF/um2 MIM      -usable for Volt <=6V across capacitor
-* 	
+*
 *      nmoscap_3p3        Subcircuit Model for 3.3v inversion-mode  NMOS capacitor
-*      pmoscap_3p3	 	  Subcircuit Model for 3.3v inversion-mode  PMOS capacitor     
+*      pmoscap_3p3	 	  Subcircuit Model for 3.3v inversion-mode  PMOS capacitor
 *      nmoscap_6p0        Subcircuit Model for 6.0V inversion-mode  NMOS capacitor
-*      pmoscap_6p0	  	  Subcircuit Model for 6.0V inversion-mode  PMOS capacitor     
+*      pmoscap_6p0	  	  Subcircuit Model for 6.0V inversion-mode  PMOS capacitor
 *      nmoscap_3p3_b      Subcircuit Model for 3.3v NMOS in Nwell capacitor
-*      pmoscap_3p3_b	  Subcircuit Model for 3.3v PMOS in Pwell capacitor     
+*      pmoscap_3p3_b	  Subcircuit Model for 3.3v PMOS in Pwell capacitor
 *      nmoscap_6p0_b      Subcircuit Model for 6.0V NMOS in Nwell capacitor
-*      pmoscap_6p0_b	  Subcircuit Model for 6.0V PMOS in Pwell capacitor 
+*      pmoscap_6p0_b	  Subcircuit Model for 6.0V PMOS in Pwell capacitor
 *
 *      efuse    	      Subcircuit model for 6V/(5V) efuse
 ************************************************************************************************
@@ -131,7 +131,7 @@
 .lib 'sm141064.ngspice' nmos_6p0_nat_t
 .lib 'sm141064.ngspice' noise_corner
 .lib 'sm141064.ngspice' fets_mm
-.endl
+.endl typical
 
 .lib ff
 .lib 'sm141064.ngspice' nmos_3p3_f
@@ -163,7 +163,7 @@
 .lib 'sm141064.ngspice' nmos_6p0_nat_t
 .lib 'sm141064.ngspice' noise_corner
 .lib 'sm141064.ngspice' fets_mm
-.endl
+.endl ff
 
 .lib ss
 .lib 'sm141064.ngspice' nmos_3p3_s
@@ -195,7 +195,7 @@
 .lib 'sm141064.ngspice' nmos_6p0_nat_t
 .lib 'sm141064.ngspice' noise_corner
 .lib 'sm141064.ngspice' fets_mm
-.endl
+.endl ss
 
 .lib fs
 .lib 'sm141064.ngspice' nmos_3p3_fs
@@ -227,7 +227,7 @@
 .lib 'sm141064.ngspice' nmos_6p0_nat_t
 .lib 'sm141064.ngspice' noise_corner
 .lib 'sm141064.ngspice' fets_mm
-.endl
+.endl fs
 
 .lib sf
 .lib 'sm141064.ngspice' nmos_3p3_sf
@@ -259,7 +259,7 @@
 .lib 'sm141064.ngspice' nmos_6p0_nat_t
 .lib 'sm141064.ngspice' noise_corner
 .lib 'sm141064.ngspice' fets_mm
-.endl
+.endl sf
 
 .lib bjt_typical
 .param isa=1
@@ -293,7 +293,7 @@
 .param mc_xcje_vpnp=0
 .param mc_xcjc_vpnp=0
 .lib 'sm141064.ngspice' bjt_mc
-.endl
+.endl bjt_typical
 
 .lib bjt_ss
 .param isa=0.65
@@ -327,7 +327,7 @@
 .param mc_xcje_vpnp=0
 .param mc_xcjc_vpnp=0
 .lib 'sm141064.ngspice' bjt_mc
-.endl
+.endl bjt_ss
 
 .lib bjt_ff
 .param isa=1.35
@@ -361,7 +361,7 @@
 .param mc_xcje_vpnp=0
 .param mc_xcjc_vpnp=0
 .lib 'sm141064.ngspice' bjt_mc
-.endl
+.endl bjt_ff
 
 .lib diode_typical
 .param jsa=1
@@ -374,7 +374,7 @@
 .param jtuna_sc=0
 .param cja_sc=1
 .lib 'sm141064.ngspice' dio
-.endl
+.endl diode_typical
 
 .lib diode_ss
 .param jsa=0.85
@@ -387,7 +387,7 @@
 .param jtuna_sc=-0.77
 .param cja_sc=1.1
 .lib 'sm141064.ngspice' dio
-.endl
+.endl diode_ss
 
 .lib diode_ff
 .param jsa=1.15
@@ -400,7 +400,7 @@
 .param jtuna_sc=0.77
 .param cja_sc=0.9
 .lib 'sm141064.ngspice' dio
-.endl
+.endl diode_ff
 
 .lib res_typical
 .param rsh_nplus_u=60
@@ -427,7 +427,7 @@
 .lib 'sm141064.ngspice' res
 .lib 'sm141064.ngspice' efuse
 .lib 'sm141064.ngspice' res_statistical_par
-.endl
+.endl res_typical
 
 .lib res_ss
 .param rsh_nplus_u=75
@@ -454,7 +454,7 @@
 .lib 'sm141064.ngspice' res
 .lib 'sm141064.ngspice' efuse
 .lib 'sm141064.ngspice' res_statistical_par
-.endl
+.endl res_ss
 
 .lib res_ff
 .param rsh_nplus_u=45
@@ -481,7 +481,7 @@
 .lib 'sm141064.ngspice' res
 .lib 'sm141064.ngspice' efuse
 .lib 'sm141064.ngspice' res_statistical_par
-.endl
+.endl res_ff
 
 .lib mimcap_typical
 .param mim_corner_1p5ff=1
@@ -491,7 +491,7 @@
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
 .lib 'sm141064.ngspice' mim_cap
-.endl
+.endl mimcap_typical
 
 .lib mimcap_ss
 .param mim_corner_1p5ff=1.155
@@ -501,7 +501,7 @@
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
 .lib 'sm141064.ngspice' mim_cap
-.endl
+.endl mimcap_ss
 
 .lib mimcap_ff
 .param mim_corner_1p5ff=0.845
@@ -511,7 +511,7 @@
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
 .lib 'sm141064.ngspice' mim_cap
-.endl
+.endl mimcap_ff
 
 .lib moscap_typical
 .param nmoscap_3p3_corner=1
@@ -523,7 +523,7 @@
 .param nmoscap_6p0_b_corner=1
 .param pmoscap_6p0_b_corner=1
 .lib 'sm141064.ngspice' moscap
-.endl
+.endl moscap_typical
 
 .lib moscap_ff
 .param nmoscap_3p3_corner=0.9
@@ -535,7 +535,7 @@
 .param nmoscap_6p0_b_corner=0.9
 .param pmoscap_6p0_b_corner=0.9
 .lib 'sm141064.ngspice' moscap
-.endl
+.endl moscap_ff
 
 .lib moscap_ss
 .param nmoscap_3p3_corner=1.1
@@ -547,7 +547,7 @@
 .param nmoscap_6p0_b_corner=1.1
 .param pmoscap_6p0_b_corner=1.1
 .lib 'sm141064.ngspice' moscap
-.endl
+.endl moscap_ss
 
 .lib statistical
 .param mc_sig_vth2=agauss(0,1,3)
@@ -666,7 +666,7 @@
 .lib 'sm141064.ngspice' pmos_6p0_stat
 .lib 'sm141064.ngspice' nmos_6p0_nat_stat
 .lib 'sm141064.ngspice' noise_corner
-.endl
+.endl statistical
 
 .lib noise_corner
 .param nmos_3p3_noia='(fnoicor==0)*3.2e+041+(fnoicor==1)*3.5e+042'
@@ -684,7 +684,7 @@
 .param nmos_6p0_nat_noia='(fnoicor==0)*5.5e+040+(fnoicor==1)*1e+041'
 .param nmos_6p0_nat_noib='(fnoicor==0)*2.5e+025+(fnoicor==1)*9.5e+025'
 .param nmos_6p0_nat_noic='(fnoicor==0)*1e+007+(fnoicor==1)*2e+007'
-.endl
+.endl noise_corner
 
 .lib nmos_3p3_t
 .subckt nmos_3p3_sab d g s b w=10u l=0.28u par=1 s_sab=0.48u d_sab=1.78u as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 dtemp=0 nf=1 sa=0 sb=0 sd=0 m=1
@@ -1154,7 +1154,7 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .model dnwpw d level=3 tref=25 is='5.2139e-007*jsa' jsw='0*jsa' ik=711930 bv=14.732 ibv=0.001 ikr=0 n=0.98 rs='2e-010*rsa' cj='0.00032124*cja' cjp='5.4659e-010*cjswa' pb=0.63391 php=0.77752 mj=0.31113 mjsw=0.39816 tlev=1 tlevc=1 trs=0.0002207 xti=3 cta=0.0012922 ctp=0.0010772 tpb=0.0019819 tphp=0.0016567 eg=1.17
 .model dnwps d level=3 tref=25 is='2e-006*jsa' jsw='1e-12*jsa' ik=229050 bv=30.48 ibv=0.001 ikr=0 n=0.99335 rs='2e-010*rsa' cj='0.00022998*cja' cjp='7.2369e-010*cjswa' pb=0.35175 php=0.37806 mj=0.14716 mjsw=0.19821 tlev=1 tlevc=1 trs=0.0026028 xti=3 cta=0.0012309 ctp=0.0012111 tpb=0.0019414 tphp=0.0017152 eg=1.17
 .model sc_diode d level=3 tref=25 js='8.16*10**jsa_sc' jsw=0 ik=4e+010 bv='17+vba_sc' ibv=9.92e-005 ikr=4e+008 n=1.0553 rs='2.768e-009*rs_sc' jtun='1048.7*10**jtuna_sc' jtunsw=0 ntun=72.211 cj='0.00176*cja_sc' cjp=0 pb=0.14256 php=0.93627 mj=0.02604 mjsw=0.1545 tlev=1 tlevc=1 tcv=-5e-005 trs=0.0022143 xti=3 xtitun=-12.347 cta=6.2962e-005 ctp=0 tpb=0.0002696 tphp=0 eg=0.61
-.endl diode
+.endl dio
 
 .lib res
 .subckt nplus_u 1 2 3 r_length=l r_width=w dtemp=0 par=1 s=1 r_rsh0='rsh_nplus_u*(1+(mc_rsh_nplus_u/(rsh_nplus_u))*res_mc_skew*sw_stat_global)' r_dw='-5e-8*(1+mc_dw_nplus_u*res_mc_skew*sw_stat_global)' r_dl=2e-11 r_vc1=0 r_vc2=0 r_tc1=1.36e-3 r_tc2=6.5e-7 r_tnom=25 r_l='s*(r_length-2*r_dl)' r_w='r_width-2*r_dw' r_n='r_l/r_w' r_temp='1+r_tc1*(temper+dtemp-r_tnom)+r_tc2*(temper+dtemp-r_tnom)*(temper+dtemp-r_tnom)' mis_r=0
