@@ -55,9 +55,9 @@
 .param pmos_10p0_asym_dcgd=1
 .param pmos_10p0_asym_dcjs=1
 .param pmos_10p0_asym_dcjd=1
-.lib smbb000149.spice nmos_10p0_asym_t
-.lib smbb000149.spice pmos_10p0_asym_t
-.lib smbb000149.spice noise_corner
+.lib 'smbb000149.spice' nmos_10p0_asym_t
+.lib 'smbb000149.spice' pmos_10p0_asym_t
+.lib 'smbb000149.spice' noise_corner
 .endl typical
 
 .lib ss
@@ -85,9 +85,9 @@
 .param pmos_10p0_asym_dcgd=1.2
 .param pmos_10p0_asym_dcjs=1.1
 .param pmos_10p0_asym_dcjd=1.2
-.lib smbb000149.spice nmos_10p0_asym_t
-.lib smbb000149.spice pmos_10p0_asym_t
-.lib smbb000149.spice noise_corner
+.lib 'smbb000149.spice' nmos_10p0_asym_t
+.lib 'smbb000149.spice' pmos_10p0_asym_t
+.lib 'smbb000149.spice' noise_corner
 .endl ss
 
 .lib ff
@@ -115,9 +115,9 @@
 .param pmos_10p0_asym_dcgd=0.8
 .param pmos_10p0_asym_dcjs=0.9
 .param pmos_10p0_asym_dcjd=0.8
-.lib smbb000149.spice nmos_10p0_asym_t
-.lib smbb000149.spice pmos_10p0_asym_t
-.lib smbb000149.spice noise_corner
+.lib 'smbb000149.spice' nmos_10p0_asym_t
+.lib 'smbb000149.spice' pmos_10p0_asym_t
+.lib 'smbb000149.spice' noise_corner
 .endl ff
 
 .lib sf
@@ -145,9 +145,9 @@
 .param pmos_10p0_asym_dcgd=0.86
 .param pmos_10p0_asym_dcjs=0.93
 .param pmos_10p0_asym_dcjd=0.86
-.lib smbb000149.spice nmos_10p0_asym_t
-.lib smbb000149.spice pmos_10p0_asym_t
-.lib smbb000149.spice noise_corner
+.lib 'smbb000149.spice' nmos_10p0_asym_t
+.lib 'smbb000149.spice' pmos_10p0_asym_t
+.lib 'smbb000149.spice' noise_corner
 .endl sf
 
 .lib fs
@@ -175,9 +175,9 @@
 .param pmos_10p0_asym_dcgd=1.14
 .param pmos_10p0_asym_dcjs=1.07
 .param pmos_10p0_asym_dcjd=1.14
-.lib smbb000149.spice nmos_10p0_asym_t
-.lib smbb000149.spice pmos_10p0_asym_t
-.lib smbb000149.spice noise_corner
+.lib 'smbb000149.spice' nmos_10p0_asym_t
+.lib 'smbb000149.spice' pmos_10p0_asym_t
+.lib 'smbb000149.spice' noise_corner
 .endl fs
 
 .lib statistical
@@ -231,9 +231,9 @@
 .param pmos_10p0_asym_dcgd='(1+(24e-3*mc_cgol_10v+24e-3*mc_cgolp_10v)*sw_stat_global*mc_skew)'
 .param pmos_10p0_asym_dcjs='(1+(12e-3*mc_cgol_10v+12e-3*mc_cgolp_10v)*sw_stat_global*mc_skew)'
 .param pmos_10p0_asym_dcjd='(1+(24e-3*mc_cgol_10v+24e-3*mc_cgolp_10v)*sw_stat_global*mc_skew)'
-.lib smbb000149.spice nmos_10p0_asym_t
-.lib smbb000149.spice pmos_10p0_asym_t
-.lib smbb000149.spice noise_corner
+.lib 'smbb000149.spice' nmos_10p0_asym_t
+.lib 'smbb000149.spice' pmos_10p0_asym_t
+.lib 'smbb000149.spice' noise_corner
 .endl statistical
 
 .lib noise_corner
@@ -246,7 +246,7 @@
 .endl noise_corner
 
 .lib nmos_10p0_asym_t
-.subckt nmos_10p0_asym d g s b params: w=25e-6 l=0.6e-6 ad='w*1.48e-6' pd='2*(1.48e-6+w)' as='w*0.48e-6' ps='(w+0.48e-6)*2' nrd=0 nrs=0 nf=1 dtemp=0 sa=0 sb=0 sd=0 par=1
+.subckt nmos_10p0_asym d g s b w=25e-6 l=0.6e-6 ad='w*1.48e-6' pd='2*(1.48e-6+w)' as='w*0.48e-6' ps='(w+0.48e-6)*2' nrd=0 nrs=0 nf=1 dtemp=0 sa=0 sb=0 sd=0 par=1
 .param rdrift1=1.5433e3
 .param wa=-1.6705e-8
 .param rd=0.17322
@@ -297,7 +297,7 @@ c3_gb g b c='(cgb_min+cgb_amp/(1+(1/pow(max(1e-3,cgb_slope*(v(b,g)-cgb_vth+nmos_
 .endl nmos_10p0_asym_t
 
 .lib pmos_10p0_asym_t
-.subckt pmos_10p0_asym d g s b params: w=2.5e-5 l=6e-7 dtemp=0 nf=1 ad='(w*1.78e-6)' pd='2*(w+1.78e-6)' as='w*0.48e-6' ps='(w+0.48e-6)*2' nrd=0 nrs=0 sa=0 sb=0 sd=0 par=1
+.subckt pmos_10p0_asym d g s b w=2.5e-5 l=6e-7 dtemp=0 nf=1 ad='(w*1.78e-6)' pd='2*(w+1.78e-6)' as='w*0.48e-6' ps='(w+0.48e-6)*2' nrd=0 nrs=0 sa=0 sb=0 sd=0 par=1
 .param rdrift=5.751e-3
 .param rd=0.94645
 .param ra=1.1954e-3
