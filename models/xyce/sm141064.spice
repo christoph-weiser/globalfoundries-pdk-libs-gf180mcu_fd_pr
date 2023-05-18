@@ -104,8 +104,8 @@
 .options parser model_binning=true
 
 .lib typical
-.lib sm141064.xyce nmos_3p3_t
-.lib sm141064.xyce pmos_3p3_t
+.lib 'sm141064.spice' nmos_3p3_t
+.lib 'sm141064.spice' pmos_3p3_t
 .param rsh_nplus_u_m=60
 .param rsh_pplus_u_m=185
 .param nmos_6p0_vsat=1
@@ -128,16 +128,16 @@
 .param pmos_6p0_dtox=0
 .param pmos_6p0_dcgdo=1
 .param pmos_6p0_dcgso=1
-.lib sm141064.xyce nmos_6p0_t
-.lib sm141064.xyce pmos_6p0_t
-.lib sm141064.xyce nmos_6p0_nat_t
-.lib sm141064.xyce noise_corner
-.lib sm141064.xyce fets_mm
+.lib 'sm141064.spice' nmos_6p0_t
+.lib 'sm141064.spice' pmos_6p0_t
+.lib 'sm141064.spice' nmos_6p0_nat_t
+.lib 'sm141064.spice' noise_corner
+.lib 'sm141064.spice' fets_mm
 .endl typical
 
 .lib ff
-.lib sm141064.xyce nmos_3p3_f
-.lib sm141064.xyce pmos_3p3_f
+.lib 'sm141064.spice' nmos_3p3_f
+.lib 'sm141064.spice' pmos_3p3_f
 .param rsh_nplus_u_m=45
 .param rsh_pplus_u_m=145
 .param nmos_6p0_vsat=1.0846
@@ -160,16 +160,16 @@
 .param pmos_6p0_dtox=-1e-9
 .param pmos_6p0_dcgdo=0.9
 .param pmos_6p0_dcgso=0.9
-.lib sm141064.xyce nmos_6p0_t
-.lib sm141064.xyce pmos_6p0_t
-.lib sm141064.xyce nmos_6p0_nat_t
-.lib sm141064.xyce noise_corner
-.lib sm141064.xyce fets_mm
+.lib 'sm141064.spice' nmos_6p0_t
+.lib 'sm141064.spice' pmos_6p0_t
+.lib 'sm141064.spice' nmos_6p0_nat_t
+.lib 'sm141064.spice' noise_corner
+.lib 'sm141064.spice' fets_mm
 .endl ff
 
 .lib ss
-.lib sm141064.xyce nmos_3p3_s
-.lib sm141064.xyce pmos_3p3_s
+.lib 'sm141064.spice' nmos_3p3_s
+.lib 'sm141064.spice' pmos_3p3_s
 .param rsh_nplus_u_m=75
 .param rsh_pplus_u_m=225
 .param nmos_6p0_vsat=0.899
@@ -192,16 +192,16 @@
 .param pmos_6p0_dtox=1e-9
 .param pmos_6p0_dcgdo=1.1
 .param pmos_6p0_dcgso=1.1
-.lib sm141064.xyce nmos_6p0_t
-.lib sm141064.xyce pmos_6p0_t
-.lib sm141064.xyce nmos_6p0_nat_t
-.lib sm141064.xyce noise_corner
-.lib sm141064.xyce fets_mm
+.lib 'sm141064.spice' nmos_6p0_t
+.lib 'sm141064.spice' pmos_6p0_t
+.lib 'sm141064.spice' nmos_6p0_nat_t
+.lib 'sm141064.spice' noise_corner
+.lib 'sm141064.spice' fets_mm
 .endl ss
 
 .lib fs
-.lib sm141064.xyce nmos_3p3_fs
-.lib sm141064.xyce pmos_3p3_fs
+.lib 'sm141064.spice' nmos_3p3_fs
+.lib 'sm141064.spice' pmos_3p3_fs
 .param rsh_nplus_u_m=48
 .param rsh_pplus_u_m=219
 .param nmos_6p0_vsat='0.0846*0.67+1'
@@ -224,16 +224,16 @@
 .param pmos_6p0_dtox=6.7e-10
 .param pmos_6p0_dcgdo=1.07
 .param pmos_6p0_dcgso=1.07
-.lib sm141064.xyce nmos_6p0_t
-.lib sm141064.xyce pmos_6p0_t
-.lib sm141064.xyce nmos_6p0_nat_t
-.lib sm141064.xyce noise_corner
-.lib sm141064.xyce fets_mm
+.lib 'sm141064.spice' nmos_6p0_t
+.lib 'sm141064.spice' pmos_6p0_t
+.lib 'sm141064.spice' nmos_6p0_nat_t
+.lib 'sm141064.spice' noise_corner
+.lib 'sm141064.spice' fets_mm
 .endl fs
 
 .lib sf
-.lib sm141064.xyce nmos_3p3_sf
-.lib sm141064.xyce pmos_3p3_sf
+.lib 'sm141064.spice' nmos_3p3_sf
+.lib 'sm141064.spice' pmos_3p3_sf
 .param rsh_nplus_u_m=72
 .param rsh_pplus_u_m=150
 .param nmos_6p0_vsat='1-(1-0.899)*0.67'
@@ -256,11 +256,11 @@
 .param pmos_6p0_dtox=-6.7e-10
 .param pmos_6p0_dcgdo=0.93
 .param pmos_6p0_dcgso=0.93
-.lib sm141064.xyce nmos_6p0_t
-.lib sm141064.xyce pmos_6p0_t
-.lib sm141064.xyce nmos_6p0_nat_t
-.lib sm141064.xyce noise_corner
-.lib sm141064.xyce fets_mm
+.lib 'sm141064.spice' nmos_6p0_t
+.lib 'sm141064.spice' pmos_6p0_t
+.lib 'sm141064.spice' nmos_6p0_nat_t
+.lib 'sm141064.spice' noise_corner
+.lib 'sm141064.spice' fets_mm
 .endl sf
 
 .lib bjt_typical
@@ -294,7 +294,7 @@
 .param mc_xrc_vpnp=0
 .param mc_xcje_vpnp=0
 .param mc_xcjc_vpnp=0
-.lib sm141064.xyce bjt_mc
+.lib 'sm141064.spice' bjt_mc
 .endl bjt_typical
 
 .lib bjt_ss
@@ -328,7 +328,7 @@
 .param mc_xrc_vpnp=0
 .param mc_xcje_vpnp=0
 .param mc_xcjc_vpnp=0
-.lib sm141064.xyce bjt_mc
+.lib 'sm141064.spice' bjt_mc
 .endl bjt_ss
 
 .lib bjt_ff
@@ -362,7 +362,7 @@
 .param mc_xrc_vpnp=0
 .param mc_xcje_vpnp=0
 .param mc_xcjc_vpnp=0
-.lib sm141064.xyce bjt_mc
+.lib 'sm141064.spice' bjt_mc
 .endl bjt_ff
 
 .lib diode_typical
@@ -375,7 +375,7 @@
 .param rs_sc=1
 .param jtuna_sc=0
 .param cja_sc=1
-.lib sm141064.xyce dio
+.lib 'sm141064.spice' dio
 .endl diode_typical
 
 .lib diode_ss
@@ -388,7 +388,7 @@
 .param rs_sc=1.1
 .param jtuna_sc=-0.77
 .param cja_sc=1.1
-.lib sm141064.xyce dio
+.lib 'sm141064.spice' dio
 .endl diode_ss
 
 .lib diode_ff
@@ -401,7 +401,7 @@
 .param rs_sc=0.9
 .param jtuna_sc=0.77
 .param cja_sc=0.9
-.lib sm141064.xyce dio
+.lib 'sm141064.spice' dio
 .endl diode_ff
 
 .lib res_typical
@@ -426,9 +426,9 @@
 .param rsh_tm9k=40e-3
 .param rsh_tm11k=40e-3
 .param rsh_tm30k=9.5e-3
-.lib sm141064.xyce res
-.lib sm141064.xyce efuse
-.lib sm141064.xyce res_statistical_par
+.lib 'sm141064.spice' res
+.lib 'sm141064.spice' efuse
+.lib 'sm141064.spice' res_statistical_par
 .endl res_typical
 
 .lib res_ss
@@ -453,9 +453,9 @@
 .param rsh_tm9k='40e-3+9e-3'
 .param rsh_tm11k='40e-3+9e-3'
 .param rsh_tm30k='9.5e-3+4.5e-3'
-.lib sm141064.xyce res
-.lib sm141064.xyce efuse
-.lib sm141064.xyce res_statistical_par
+.lib 'sm141064.spice' res
+.lib 'sm141064.spice' efuse
+.lib 'sm141064.spice' res_statistical_par
 .endl res_ss
 
 .lib res_ff
@@ -480,9 +480,9 @@
 .param rsh_tm9k='40e-3-9e-3'
 .param rsh_tm11k='40e-3-9e-3'
 .param rsh_tm30k='9.5e-3-3.5e-3'
-.lib sm141064.xyce res
-.lib sm141064.xyce efuse
-.lib sm141064.xyce res_statistical_par
+.lib 'sm141064.spice' res
+.lib 'sm141064.spice' efuse
+.lib 'sm141064.spice' res_statistical_par
 .endl res_ff
 
 .lib mimcap_typical
@@ -492,7 +492,7 @@
 .param mc_c_cox_1p0ff=0
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
-.lib sm141064.xyce mim_cap
+.lib 'sm141064.spice' mim_cap
 .endl mimcap_typical
 
 .lib mimcap_ss
@@ -502,7 +502,7 @@
 .param mc_c_cox_1p0ff=0
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
-.lib sm141064.xyce mim_cap
+.lib 'sm141064.spice' mim_cap
 .endl mimcap_ss
 
 .lib mimcap_ff
@@ -512,7 +512,7 @@
 .param mc_c_cox_1p0ff=0
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
-.lib sm141064.xyce mim_cap
+.lib 'sm141064.spice' mim_cap
 .endl mimcap_ff
 
 .lib moscap_typical
@@ -524,7 +524,7 @@
 .param pmoscap_3p3_b_corner=1
 .param nmoscap_6p0_b_corner=1
 .param pmoscap_6p0_b_corner=1
-.lib sm141064.xyce moscap
+.lib 'sm141064.spice' moscap
 .endl moscap_typical
 
 .lib moscap_ff
@@ -536,7 +536,7 @@
 .param pmoscap_3p3_b_corner=0.9
 .param nmoscap_6p0_b_corner=0.9
 .param pmoscap_6p0_b_corner=0.9
-.lib sm141064.xyce moscap
+.lib 'sm141064.spice' moscap
 .endl moscap_ff
 
 .lib moscap_ss
@@ -548,7 +548,7 @@
 .param pmoscap_3p3_b_corner=1.1
 .param nmoscap_6p0_b_corner=1.1
 .param pmoscap_6p0_b_corner=1.1
-.lib sm141064.xyce moscap
+.lib 'sm141064.spice' moscap
 .endl moscap_ss
 
 .lib statistical
@@ -661,13 +661,13 @@
 .param rsh_pplus2_u=185
 .param rsh_nplus_u_m='rsh_nplus2_u*(1+(mc_rsh_nplus_u/(rsh_nplus2_u))*res_mc_skew*sw_stat_global)'
 .param rsh_pplus_u_m='rsh_pplus2_u*(1+(mc_rsh_pplus_u/(rsh_pplus2_u))*res_mc_skew*sw_stat_global)'
-.lib sm141064.xyce fets_mm
-.lib sm141064.xyce nmos_3p3_stat
-.lib sm141064.xyce pmos_3p3_stat
-.lib sm141064.xyce nmos_6p0_t
-.lib sm141064.xyce pmos_6p0_stat
-.lib sm141064.xyce nmos_6p0_nat_stat
-.lib sm141064.xyce noise_corner
+.lib 'sm141064.spice' fets_mm
+.lib 'sm141064.spice' nmos_3p3_stat
+.lib 'sm141064.spice' pmos_3p3_stat
+.lib 'sm141064.spice' nmos_6p0_t
+.lib 'sm141064.spice' pmos_6p0_stat
+.lib 'sm141064.spice' nmos_6p0_nat_stat
+.lib 'sm141064.spice' noise_corner
 .endl statistical
 
 .lib noise_corner
@@ -1787,8 +1787,8 @@ m0 d g s b pmos_6p0 w='w' l='l' as='as' ad='ad' ps='ps' pd='pd' nrd='nrd' nrs='n
 .param mc_rt_ppolyf_u_1k_6p0='mc_rt_ppolyf_u_1k_6p0_temp'
 .param mc_rt_ppolyf_u_2k_6p0='mc_rt_ppolyf_u_2k_6p0_temp'
 .param mc_rt_ppolyf_u_3k='mc_rt_ppolyf_u_3k_temp'
-.lib sm141064.xyce res
-.lib sm141064.xyce efuse
+.lib 'sm141064.spice' res
+.lib 'sm141064.spice' efuse
 .endl res_statistical
 
 .lib bjt_statistical
@@ -1836,7 +1836,7 @@ m0 d g s b pmos_6p0 w='w' l='l' as='as' ad='ad' ps='ps' pd='pd' nrd='nrd' nrs='n
 .param mc_xrc_vpnp='mc_xrc_vpnp_temp'
 .param mc_xcje_vpnp='mc_xcje_vpnp_temp'
 .param mc_xcjc_vpnp='mc_xcjc_vpnp_temp'
-.lib sm141064.xyce bjt_mc
+.lib 'sm141064.spice' bjt_mc
 .endl bjt_statistical
 
 .lib bjt_mc
@@ -1902,5 +1902,5 @@ q0 c b e s vnpn_0p54x2
 .param mc_c_cox_1p0ff='mc_c_cox_1p0ff2*sw_stat_global*cap_mc_skew'
 .param mc_c_cox_1p5ff='mc_c_cox_1p5ff2*sw_stat_global*cap_mc_skew'
 .param mc_c_cox_2p0ff='mc_c_cox_2p0ff2*sw_stat_global*cap_mc_skew'
-.lib sm141064.xyce mim_cap
+.lib 'sm141064.spice' mim_cap
 .endl mimcap_statistical
