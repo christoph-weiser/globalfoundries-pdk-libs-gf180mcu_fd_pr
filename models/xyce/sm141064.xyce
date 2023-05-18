@@ -1599,7 +1599,7 @@ rfuse in out r='200*(1-pblow)+900*pblow'
 .endl efuse
 
 .lib fets_mm
-.subckt nmos_3p3 d g s b params: w=1e-5 l=2.8e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
+.subckt nmos_3p3 d g s b w=1e-5 l=2.8e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
 .param par_vth=0.007148
 .param par_k=0.007008
 .param par_l=1.5e-7
@@ -1611,9 +1611,9 @@ rfuse in out r='200*(1-pblow)+900*pblow'
 .param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
 .param mis_vth='agauss(0,var_vth,1)'
-m0 d g s b nmos_3p3 ad='ad' as='as' l='l' nrd='nrd' nrs='nrs' pd='pd' ps='ps' w='w'
+m0 d g s b nmos_3p3 w='w' l='l' as='as' ad='ad' ps='ps' pd='pd' nrd='nrd' nrs='nrs' delvto='mis_vth*sw_stat_mismatch' sa='sa' sb='sb' nf='nf' sd='sd'
 .ends nmos_3p3
-.subckt pmos_3p3 d g s b params: w=1e-5 l=2.8e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
+.subckt pmos_3p3 d g s b w=1e-5 l=2.8e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
 .param par_vth=0.00666
 .param par_k=0.002833
 .param par_l=1.5e-7
@@ -1625,9 +1625,9 @@ m0 d g s b nmos_3p3 ad='ad' as='as' l='l' nrd='nrd' nrs='nrs' pd='pd' ps='ps' w=
 .param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
 .param mis_vth='agauss(0,var_vth,1)'
-m0 d g s b pmos_3p3 ad='ad' as='as' l='l' nrd='nrd' nrs='nrs' pd='pd' ps='ps' w='w'
+m0 d g s b pmos_3p3 w='w' l='l' as='as' ad='ad' ps='ps' pd='pd' nrd='nrd' nrs='nrs' delvto='mis_vth*sw_stat_mismatch' sa='sa' sb='sb' nf='nf' sd='sd'
 .ends pmos_3p3
-.subckt nmos_6p0 d g s b params: w=1e-5 l=7e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
+.subckt nmos_6p0 d g s b w=1e-5 l=7e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
 .param par_vth=0.01155
 .param par_k=0.0000
 .param par_l=4e-7
@@ -1639,9 +1639,9 @@ m0 d g s b pmos_3p3 ad='ad' as='as' l='l' nrd='nrd' nrs='nrs' pd='pd' ps='ps' w=
 .param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
 .param mis_vth='agauss(0,var_vth,1)'
-m0 d g s b nmos_6p0 ad='ad' as='as' l='l' nrd='nrd' nrs='nrs' pd='pd' ps='ps' w='w'
+m0 d g s b nmos_6p0 w='w' l='l' as='as' ad='ad' ps='ps' pd='pd' nrd='nrd' nrs='nrs' delvto='mis_vth*sw_stat_mismatch' sa='sa' sb='sb' nf='nf' sd='sd'
 .ends nmos_6p0
-.subckt pmos_6p0 d g s b params: w=1e-5 l=5e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
+.subckt pmos_6p0 d g s b w=1e-5 l=5e-7 as=0 ad=0 ps=0 pd=0 nrd=0 nrs=0 par=1 dtemp=0 sa=0 sb=0 nf=1 sd=0 m=1
 .param par_vth=0.01051
 .param par_k=0.00517
 .param par_l=3e-7
@@ -1653,7 +1653,7 @@ m0 d g s b nmos_6p0 ad='ad' as='as' l='l' nrd='nrd' nrs='nrs' pd='pd' ps='ps' w=
 .param mis_k='agauss(0,var_k,1)'
 .param var_vth='0.7071*par_vth*1e-06/p_sqrtarea'
 .param mis_vth='agauss(0,var_vth,1)'
-m0 d g s b pmos_6p0 ad='ad' as='as' l='l' nrd='nrd' nrs='nrs' pd='pd' ps='ps' w='w'
+m0 d g s b pmos_6p0 w='w' l='l' as='as' ad='ad' ps='ps' pd='pd' nrd='nrd' nrs='nrs' delvto='mis_vth*sw_stat_mismatch' sa='sa' sb='sb' nf='nf' sd='sd'
 .ends pmos_6p0
 .endl fets_mm
 
