@@ -1,3 +1,10 @@
+NOTES for this fork
+====================
+- The model libraries for Xyce and Ngspice have undergone major refactoring. 
+- Many bugfixes to the models and also to the PDK in general.
+
+
+
 GlobalFoundries 180nm MCU primitive libraries
 =============================================
 
