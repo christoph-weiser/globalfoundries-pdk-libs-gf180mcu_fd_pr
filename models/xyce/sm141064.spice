@@ -1207,7 +1207,7 @@ d2 3 2 nwp area='r_w*r_l/2'
 .subckt npolyf_u 1 2 3 r_length='l' r_width='w' dtemp=0 par=1 s=1 r_rsh0='rsh_npolyf_u*(1+mc_rsh_npolyf_u/(rsh_npolyf_u)*res_mc_skew*sw_stat_global)' r_dw='0.0265e-6*(1+mc_dw_npolyf_u*res_mc_skew*sw_stat_global)' r_dl=8.48e-11 r_vc1=0 r_vc2=0 r_tc1=-1.4e-3 r_tc2=2.2e-6 r_tnom=25 r_l='s*(r_length-2*r_dl)' r_w='r_width-2*r_dw' r_n='r_l/r_w' r_temp='1+r_tc1*(temp+dtemp-r_tnom)+r_tc2*(temp+dtemp-r_tnom)*(temp+dtemp-r_tnom)' par_r=0.05808 par_sqrtarea='sqrt(par*(r_l)*(r_w))' var_r='0.7071*par_r*1e-06/par_sqrtarea' mis_r='agauss(0,var_r,1)'
 .model npolyf_u_body r level=1
 .model npolyf_u_t r rsh='40+mc_rt_npolyf_u*res_mc_skew*sw_stat_global' tc1=-0.735e-3 tc2=-1.7e-6 level=1
-.model fox_sub c level=1
+.model fox_sub c cj=8.85e-05
 rt1 1 11 npolyf_u_t l='s*1u' w='r_w'
 c1 1 3 fox_sub l='r_l/2' w='r_w'
 rb 11 21 npolyf_u_body r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(11,21))/r_n+r_vc2*abs(v(11,21))*abs(v(11,21))/r_n/r_n)*(1+mis_r*sw_stat_mismatch)' l='r_l' w='r_w'
@@ -1217,7 +1217,7 @@ c2 2 3 fox_sub l='r_l/2' w='r_w'
 .subckt ppolyf_u 1 2 3 r_length='l' r_width='w' dtemp=0 par=1 s=1 r_rsh0='rsh_ppolyf_u*(1+mc_rsh_ppolyf_u/(rsh_ppolyf_u)*res_mc_skew*sw_stat_global)' r_dw='2.55e-8*(1+mc_dw_ppolyf_u*res_mc_skew*sw_stat_global)' r_dl=2e-11 r_vc1=0 r_vc2=0 r_tc1=-0.9e-4 r_tc2=7e-7 r_tnom=25 r_l='s*(r_length-2*r_dl)' r_w='r_width-2*r_dw' r_n='r_l/r_w' r_temp='1+r_tc1*(temp+dtemp-r_tnom)+r_tc2*(temp+dtemp-r_tnom)*(temp+dtemp-r_tnom)' par_r=0.021 par_sqrtarea='sqrt(par*(r_l)*(r_w))' var_r='0.7071*par_r*1e-06/par_sqrtarea' mis_r='agauss(0,var_r,1)'
 .model ppolyf_u_body r level=1
 .model ppolyf_u_t r rsh='60+mc_rt_ppolyf_u*res_mc_skew*sw_stat_global' tc1=-1.47e-3 tc2=0.82e-6 level=1
-.model fox_sub c level=1
+.model fox_sub c cj=8.85e-05
 rt1 1 11 ppolyf_u_t l='s*1u' w='r_w'
 c1 1 3 fox_sub l='r_l/2' w='r_w'
 rb 11 21 ppolyf_u_body r='(r_temp*r_n*(r_rsh0+r_vc1*abs(v(11,21))/r_n+r_vc2*abs(v(11,21))*abs(v(11,21))/r_n/r_n))*(1+mis_r*sw_stat_mismatch)' l='r_l' w='r_w'
@@ -1227,7 +1227,7 @@ c2 2 3 fox_sub l='r_l/2' w='r_w'
 .subckt npolyf_s 1 2 3 r_length='l' r_width='w' dtemp=0 par=1 s=1 r_rsh0='rsh_npolyf_s*(1+mc_rsh_npolyf_s/(rsh_npolyf_s)*res_mc_skew*sw_stat_global)' r_dw='6.5e-9*(1+mc_dw_npolyf_s*res_mc_skew*sw_stat_global)' r_dl=1.5e-11 r_vc1=0 r_vc2=0 r_tc1=3.26e-3 r_tc2=0.25e-6 r_tnom=25 r_l='s*(r_length-2*r_dl)' r_w='r_width-2*r_dw' r_n='r_l/r_w' r_temp='1+r_tc1*(temp+dtemp-r_tnom)+r_tc2*(temp+dtemp-r_tnom)*(temp+dtemp-r_tnom)'
 .model npolyf_s_body r level=1
 .model npolyf_s_t r rsh=5.5 tc1=1.28e-3 tc2=-0.5e-6 level=1
-.model fox_sub c level=1
+.model fox_sub c cj=8.85e-05
 rt1 1 11 npolyf_s_t l='s*1u' w='r_w'
 c1 1 3 fox_sub l='r_l/2' w='r_w'
 rb 11 21 npolyf_s_body r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(11,21))/r_n+r_vc2*abs(v(11,21))*abs(v(11,21))/r_n/r_n)' l='r_l' w='r_w'
@@ -1237,7 +1237,7 @@ c2 2 3 fox_sub l='r_l/2' w='r_w'
 .subckt ppolyf_s 1 2 3 r_length='l' r_width='w' dtemp=0 par=1 s=1 r_rsh0='rsh_ppolyf_s*(1+mc_rsh_ppolyf_s/(rsh_ppolyf_s)*res_mc_skew*sw_stat_global)' r_dw='7.5e-9*(1+mc_dw_ppolyf_s*res_mc_skew*sw_stat_global)' r_dl=1.5e-10 r_vc1=0 r_vc2=0 r_tc1=3.245e-3 r_tc2=3.6e-7 r_tnom=25 r_l='s*(r_length-2*r_dl)' r_w='r_width-2*r_dw' r_n='r_l/r_w' r_temp='1+r_tc1*(temp+dtemp-r_tnom)+r_tc2*(temp+dtemp-r_tnom)*(temp+dtemp-r_tnom)'
 .model ppolyf_s_body r level=1
 .model ppolyf_s_t r rsh=5 tc1=1.254e-3 tc2=-0.27e-6 level=1
-.model fox_sub c level=1
+.model fox_sub c cj=8.85e-05
 rt1 1 11 ppolyf_s_t l='s*1u' w='r_w'
 c1 1 3 fox_sub l='r_l/2' w='r_w'
 rb 11 21 ppolyf_s_body r='(r_temp*r_n*(r_rsh0+r_vc1*abs(v(11,21))/r_n+r_vc2*abs(v(11,21))*abs(v(11,21))/r_n/r_n))' l='r_l' w='r_w'
@@ -1259,7 +1259,7 @@ c2 2 3 fox_sub l='r_l/2' w='r_w'
 .param r_temp='1+r_tc1*(temp+dtemp-r_tnom)+r_tc2*(temp+dtemp-r_tnom)*(temp+dtemp-r_tnom)'
 .model ppolyf_u_1k_body r level=1
 .model ppolyf_u_1k_t r rsh='85.45+mc_rt_ppolyf_u_1k*res_mc_skew*sw_stat_global' tc1=-7.92e-3 tc2=4.25e-5 level=1
-.model fox_sub c level=1
+.model fox_sub c cj=8.85e-05
 rt1 1 11 ppolyf_u_1k_t l='s*1u' w='r_w'
 c1 1 3 fox_sub l='r_l/2' w='r_w'
 rb 11 21 ppolyf_u_1k_body r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(11,21))/r_n+r_vc2*abs(v(11,21))*abs(v(11,21))/r_n/r_n)' l='r_l' w='r_w'
@@ -1281,7 +1281,7 @@ c2 2 3 fox_sub l='r_l/2' w='r_w'
 .param r_temp='1+r_tc1*(temp+dtemp-r_tnom)+r_tc2*(temp+dtemp-r_tnom)*(temp+dtemp-r_tnom)'
 .model ppolyf_u_2k_body r level=1
 .model ppolyf_u_2k_t r rsh='33.16+mc_rt_ppolyf_u_2k*res_mc_skew*sw_stat_global' tc1=-0.003763316 tc2=9.81166e-06 level=1
-.model fox_sub c level=1
+.model fox_sub c cj=8.85e-05
 rt1 1 11 ppolyf_u_2k_t l='s*1u' w='r_w'
 c1 1 3 fox_sub l='r_l/2' w='r_w'
 rb 11 21 ppolyf_u_2k_body r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(11,21))/r_n+r_vc2*abs(v(11,21))*abs(v(11,21))/r_n/r_n)' l='r_l' w='r_w'
@@ -1303,7 +1303,7 @@ c2 2 3 fox_sub l='r_l/2' w='r_w'
 .param r_temp='1+r_tc1*(temp+dtemp-r_tnom)+r_tc2*(temp+dtemp-r_tnom)*(temp+dtemp-r_tnom)'
 .model ppolyf_u_1k_body r level=1
 .model ppolyf_u_1k_t r rsh='85.45+mc_rt_ppolyf_u_1k_6p0*res_mc_skew*sw_stat_global' tc1=-7.92e-3 tc2=4.25e-5 level=1
-.model fox_sub c level=1
+.model fox_sub c cj=8.85e-05
 rt1 1 11 ppolyf_u_1k_t l='s*1u' w='r_w'
 c1 1 3 fox_sub l='r_l/2' w='r_w'
 rb 11 21 ppolyf_u_1k_body r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(11,21))/r_n+r_vc2*abs(v(11,21))*abs(v(11,21))/r_n/r_n)' l='r_l' w='r_w'
@@ -1325,7 +1325,7 @@ c2 2 3 fox_sub l='r_l/2' w='r_w'
 .param r_temp='1+r_tc1*(temp+dtemp-r_tnom)+r_tc2*(temp+dtemp-r_tnom)*(temp+dtemp-r_tnom)'
 .model ppolyf_u_2k_body r level=1
 .model ppolyf_u_2k_t r rsh='33.16+mc_rt_ppolyf_u_2k_6p0*res_mc_skew*sw_stat_global' tc1=-0.003763316 tc2=9.81166e-06 level=1
-.model fox_sub c level=1
+.model fox_sub c cj=8.85e-05
 rt1 1 11 ppolyf_u_2k_t l='s*1u' w='r_w'
 c1 1 3 fox_sub l='r_l/2' w='r_w'
 rb 11 21 ppolyf_u_2k_body r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(11,21))/r_n+r_vc2*abs(v(11,21))*abs(v(11,21))/r_n/r_n)' l='r_l' w='r_w'
@@ -1347,7 +1347,7 @@ c2 2 3 fox_sub l='r_l/2' w='r_w'
 .param r_temp='1+r_tc1*(temp+dtemp-r_tnom)+r_tc2*(temp+dtemp-r_tnom)*(temp+dtemp-r_tnom)'
 .model ppolyf_u_3k_body r level=1
 .model ppolyf_u_3k_t r rsh='33.16+mc_rt_ppolyf_u_3k*res_mc_skew*sw_stat_global' tc1=-0.003763316 tc2=9.81166e-06 level=1
-.model fox_sub c level=1
+.model fox_sub c cj=8.85e-05
 rt1 1 11 ppolyf_u_3k_t l='s*1u' w='r_w'
 c1 1 3 fox_sub l='r_l/2' w='r_w'
 rb 11 21 ppolyf_u_3k_body r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(11,21))/r_n+r_vc2*abs(v(11,21))*abs(v(11,21))/r_n/r_n)' l='r_l' w='r_w'
