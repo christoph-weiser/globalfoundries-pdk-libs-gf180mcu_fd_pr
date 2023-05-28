@@ -1147,15 +1147,15 @@ rb 1 2 r='r_temp*r_n*(r_rsh0+r_vc1*abs(v(1,2))/r_n+r_vc2*abs(v(1,2))*abs(v(1,2))
 .endl pmos_6p0_t
 
 .lib dio
-.model np_3p3 d cj='0.00096797*cja' eg=1.17 ibv=0.001 is='2.2959e-007*jsa' n=1.01 rs='2e-010*rsa' vb=11.0 xti=3 tnom=25 ikf=300000 level=2
-.model pn_3p3 d cj='0.00094344*cja' eg=1.17 ibv=0.001 is='1.653e-007*jsa' n=1 rs='2e-010*rsa' vb=10.5 xti=3 level=2
-.model np_6p0 d cj='0.00095*cja' eg=1.11 ibv=0.001 is='6.88e-007*jsa' n=1.0541 rs='2e-010*rsa' vb=11 xti=5 level=2
+.model np_3p3 d cj='0.00096797*cja' eg=1.17 ibv=0.001 is='2.2959e-007*jsa' n=1.01 rs='2e-010*rsa' bv=11.0 xti=3 tnom=25 ikf=300000 level=2
+.model pn_3p3 d cj='0.00094344*cja' eg=1.17 ibv=0.001 is='1.653e-007*jsa' n=1 rs='2e-010*rsa' bv=10.5 xti=3 level=2
+.model np_6p0 d cj='0.00095*cja' eg=1.11 ibv=0.001 is='6.88e-007*jsa' n=1.0541 rs='2e-010*rsa' bv=11 xti=5 level=2
 .model pn_6p0 d bv=10.5 cj='0.000912*cja' eg=1.17 is='2.0867e-007*jsa' n=1.0058 rs='2.0e-010*rsa' xti=3 level=2
-.model nwp_3p3 d cj='0.00014917*cja' eg=1.18 ibv=0.001 is='1.5654e-006*jsa' n=1.01 rs='2e-010*rsa' vb=0 xti=3 level=2
+.model nwp_3p3 d cj='0.00014917*cja' eg=1.18 ibv=0.001 is='1.5654e-006*jsa' n=1.01 rs='2e-010*rsa' bv=0 xti=3 level=2
 .model nwp_6p0 d bv=14 cj='0.00014914*cja' eg=1.1763 is='1.6119e-006*jsa' n=1 rs='2e-010*rsa' xti=3 level=2
-.model dnwpw d cj='0.00032124*cja' eg=1.17 ibv=0.001 is='5.2139e-007*jsa' n=0.98 rs='2e-010*rsa' vb=14.732 xti=3 level=2
-.model dnwps d cj='0.00022998*cja' eg=1.17 ibv=0.001 is='2e-006*jsa' n=0.99335 rs='2e-010*rsa' vb=30.48 xti=3 level=2
-.model sc_diode d cj='0.00176*cja_sc' eg=0.61 ibv=9.92e-005 js='8.16*10**jsa_sc' n=1.0553 rs='2.768e-009*rs_sc' vb='17+vba_sc' xti=3 level=2
+.model dnwpw d cj='0.00032124*cja' eg=1.17 ibv=0.001 is='5.2139e-007*jsa' n=0.98 rs='2e-010*rsa' bv=14.732 xti=3 level=2
+.model dnwps d cj='0.00022998*cja' eg=1.17 ibv=0.001 is='2e-006*jsa' n=0.99335 rs='2e-010*rsa' bv=30.48 xti=3 level=2
+.model sc_diode d cj='0.00176*cja_sc' eg=0.61 ibv=9.92e-005 js='8.16*10**jsa_sc' n=1.0553 rs='2.768e-009*rs_sc' bv='17+vba_sc' xti=3 level=2
 .endl dio
 
 .lib res
