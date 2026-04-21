@@ -86,9 +86,9 @@
 *      tm11k               Subcircuit Model for 2-terminal top metal 11k resistor
 *      tm30k               Subcircuit Model for 2-terminal top metal 30k resistor
 *
-*      cap_mim_1f5fF       Subcircuit Model for 1.5fF/um2 MIM (*)-usable for Volt <=6V across capacitor
-*      cap_mim_1f0fF       Subcircuit Model for 1.0fF/um2 MIM (*)-usable for Volt <=20V across capacitor
-*      cap_mim_2f0fF       Subcircuit Model for 2fF/um2 MIM      -usable for Volt <=6V across capacitor
+*      cap_mim_1f5ff       Subcircuit Model for 1.5fF/um2 MIM (*)-usable for Volt <=6V across capacitor
+*      cap_mim_1f0ff       Subcircuit Model for 1.0fF/um2 MIM (*)-usable for Volt <=20V across capacitor
+*      cap_mim_2f0ff       Subcircuit Model for 2fF/um2 MIM      -usable for Volt <=6V across capacitor
 *
 *      cap_nmos_03v3       Subcircuit Model for 3.3v inversion-mode  NMOS capacitor
 *      cap_pmos_03v3	   Subcircuit Model for 3.3v inversion-mode  PMOS capacitor
@@ -494,7 +494,7 @@
 .param mc_c_cox_1p0ff=0
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
-.lib 'sm141064_mim.spice' cap_mim_new
+.lib 'sm141064.spice' cap_mim
 .endl
 
 .lib mimcap_ss
@@ -504,7 +504,7 @@
 .param mc_c_cox_1p0ff=0
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
-.lib 'sm141064_mim.spice' cap_mim_new
+.lib 'sm141064.spice' cap_mim
 .endl
 
 .lib mimcap_ff
@@ -514,7 +514,7 @@
 .param mc_c_cox_1p0ff=0
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
-.lib 'sm141064_mim.spice' cap_mim_new
+.lib 'sm141064.spice' cap_mim
 .endl
 
 .lib moscap_typical
@@ -47728,5 +47728,5 @@ q0 c b e s npn_00p54x02p00 dtemp=dtemp
 .param mc_c_cox_1p0ff='mc_c_cox_1p0ff2*sw_stat_global*cap_mc_skew'
 .param mc_c_cox_1p5ff='mc_c_cox_1p5ff2*sw_stat_global*cap_mc_skew'
 .param mc_c_cox_2p0ff='mc_c_cox_2p0ff2*sw_stat_global*cap_mc_skew'
-.lib 'sm141064_mim.spice' cap_mim_new
+.lib 'sm141064.spice' cap_mim
 .endl
