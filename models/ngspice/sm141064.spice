@@ -494,7 +494,7 @@
 .param mc_c_cox_1p0ff=0
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
-.lib 'sm141064.spice' cap_mim
+.lib 'sm141064_mim.spice' cap_mim_new
 .endl mimcap_typical
 
 .lib mimcap_ss
@@ -504,7 +504,7 @@
 .param mc_c_cox_1p0ff=0
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
-.lib 'sm141064.spice' cap_mim
+.lib 'sm141064_mim.spice' cap_mim_new
 .endl mimcap_ss
 
 .lib mimcap_ff
@@ -514,7 +514,7 @@
 .param mc_c_cox_1p0ff=0
 .param mc_c_cox_1p5ff=0
 .param mc_c_cox_2p0ff=0
-.lib 'sm141064.spice' cap_mim
+.lib 'sm141064_mim.spice' cap_mim_new
 .endl mimcap_ff
 
 .lib moscap_typical
@@ -47728,5 +47728,5 @@ q0 c b e s npn_00p54x02p00 dtemp=dtemp
 .param mc_c_cox_1p0ff='mc_c_cox_1p0ff2*sw_stat_global*cap_mc_skew'
 .param mc_c_cox_1p5ff='mc_c_cox_1p5ff2*sw_stat_global*cap_mc_skew'
 .param mc_c_cox_2p0ff='mc_c_cox_2p0ff2*sw_stat_global*cap_mc_skew'
-.lib 'sm141064.spice' cap_mim
+.lib 'sm141064_mim.spice' cap_mim_new
 .endl mimcap_statistical
